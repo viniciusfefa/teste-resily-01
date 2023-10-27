@@ -1,0 +1,29 @@
+#.github/workflows/sync-with-anima.yml
+
+name: Sync with Anima
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+jobs:
+
+  sync-with-anima:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the storybook
+        run: npm run build-storybook
+      # Sync with Anima
+      - name: Sync with Anima
+        # Add the Anima token as a secret in your repository Settings > Secrets and variables > New repository secret
+        # you can get the token from the Anima plugin in Figma
+        env:
+          ANIMA_TEAM_TOKEN: ${{ secrets.ANIMA_TEAM_TOKEN }}
+        run: npm run anima sync --storybook --design-tokens design-tokens.json
