@@ -25,5 +25,5 @@ jobs:
         # Add the Anima token as a secret in your repository Settings > Secrets and variables > New repository secret
         # you can get the token from the Anima plugin in Figma
         env:
-          ANIMA_TEAM_TOKEN: ${{ secrets.ANIMA_TEAM_TOKEN }}
+          ANIMA_TEAM_TOKEN: ${{ secrets.v19_4yIAWmqsq9JOUkfZSgZLTA }}
         run: npm run anima sync --storybook --design-tokens design-tokens.json
