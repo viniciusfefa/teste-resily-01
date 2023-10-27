@@ -1,0 +1,31 @@
+.macbook-air {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.macbook-air .div-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(69.06, 29.64, 62.75) 0%,
+    rgba(25.59, 17.08, 30.81, 0.96) 22.77%,
+    rgb(17, 17, 31) 83.85%
+  );
+  background-color: rgba(255, 255, 255, 1);
+  height: 4524px;
+  position: relative;
+  width: 1280px;
+}
+
+.macbook-air .LOGO-instance {
+  left: 473px !important;
+  top: 240px !important;
+}
+
+.macbook-air .NAVBAR-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
